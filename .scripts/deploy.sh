@@ -12,5 +12,6 @@ yarn install --frozen-lockfile
 
 echo "Building the project..."
 yarn run build
+pm2 restart cowHut
 
 echo "Deployment Finished!"
