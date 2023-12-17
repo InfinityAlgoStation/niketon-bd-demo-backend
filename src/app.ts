@@ -17,7 +17,7 @@ app.use('/api/v1/', routes);
 
 // testing
 app.get('/', async (req: Request, res: Response) => {
-  res.send('Server is running auto change is detect 📌 ');
+  res.send('Server is running auto change is detect 📌 last change ✅✅');
 });
 
 // global error handler middleware
