@@ -14,12 +14,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout
       - name: Deploy to Server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@main
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script: 'cd cowBackend/niketon-bd-demo-backend && /.scripts/deploy.sh'
+          script: 'cd /cowBackend/niketon-bd-demo-backend && ./.scripts/deploy.sh'
